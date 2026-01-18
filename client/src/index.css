@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8f22ff;
+  --color-primary-dull: #8f00ff;
+}
+
+@layer base {
+  *{
+    @apply text-white m-0 p-0;
+  }
+  body{
+    @apply bg-black overflow-x-hidden;
+  }
+  h1{
+    @apply text-[#8f00ff] text-[1.5rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.2rem] font-bold;
+  }
+  h2{
+    @apply text-[1.5rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2rem] font-bold;
+  }
+  p{
+    @apply text-justify [text-justify:inter-word] [hyphens:auto] text-sm sm:text-[1rem] lg:text-[1.1rem];
+  }
+  input, textarea{
+    @apply border border-white rounded-b-[2rem] px-1 py-2 text-center mt-6 text-[.7rem] sm:text-[.8rem] md:text-[1.2rem] lg:text-[1.3rem];
+  }
+  textarea{
+    @apply w-40 h-16 sm:w-60 sm:h-26 md:w-100 md:h-40 overflow-hidden;
+  }
+  input:focus, textarea:focus, button:focus{
+    @apply outline-none;
+  }
+  a{
+    @apply text-sm md:text-[1rem] lg:text-[1.2rem];
+  }
+  button{
+    @apply border rounded-2xl px-4 py-2 text-[.6rem] sm:text-[.8rem] md:text-[1rem] lg:text-[1.4rem];
+  }
+  span{
+    @apply text-[#8f00ff] text-[1.6rem];
+  }
+  table{
+    @apply text-[.8rem] md:text-[.9rem] lg:text-[1.1rem];
+  }
+}
+
+/* -------------------------------------------------- Rainbow Animation ------------------------------------------------- */
+th, h1, h2, h3, h4, h5, h6, span, a, button {
+  transition: all 0.5s ease-in-out;
+}
+
+th:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, span:hover, a:hover, button:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-image: linear-gradient(90deg,
+   #8b00ff, #4b0082, #0000ff, #00ff00, #ffff00, #ff7f00, #ff0000
+  );
+
+  background-size: 700% 100%;
+  animation: rainbow-flow 5s linear infinite;
+}
+
+@keyframes rainbow-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+/* -------------------------------------------------- FireFly ------------------------------------------------- */
+.firefly-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.firefly {
+  position: absolute;
+  border-radius: 50%;
+   background: radial-gradient(rgba(173, 20, 255, 0.8), rgba(143, 0, 255, 0));
+  box-shadow:
+      0 0 10px rgba(143, 0, 255, 0.302),
+      0 0 20px rgba(143, 0, 255, 0.3),
+      0 0 30px rgba(143, 0, 255, 0.3),
+      0 0 40px rgba(143, 0, 255, 0.3);
+  animation: 
+      flicker var(--flicker-duration, 4s) infinite alternate,
+      moveFirefly var(--move-duration, 10s) linear infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes moveFirefly {
+  0% { transform: translate(0, 0); }
+  50% { 
+    transform: translate(var(--move-x, 50px), var(--move-y, 50px)); 
+  }
+  100% { transform: translate(0, 0); }
+}
