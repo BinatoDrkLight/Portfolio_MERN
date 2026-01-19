@@ -12,7 +12,7 @@ await connectDB()
 await connectCloudinary()
 
 //Allow multiple origins
-const allowedOrigins = ['http://localhost:5173', 'https://portfoliomern-one.vercel.app']
+const allowedOrigins = ['http://localhost:5173', 'https://portfoliomern-one.vercel.app', 'https://bineshadhikari.com.np']
 
 //Middleware configuration 
 app.use(express.json());
