@@ -15,8 +15,8 @@ const Home = () => {
             <p>Passionate MERN developer</p>
         </div>
 
-        <div className='mt-[-3rem] md:mt-[-5rem] xl:mt-[-6rem] ml-[-6rem] w-[10rem] sm:w-[12rem] md:w-[16rem] lg:w-[20rem] xl:w-[28rem] h-auto'>
-          <img src={assets.ProfilePic11} alt="Profile pic11" />
+        <div className='mt-[-4rem] sm:mt-[-6rem] md:mt-[-5rem] lg:mt-[-9rem] xl:mt-[-8rem] ml-[-4rem] sm:ml-[-7rem] w-[10rem] sm:w-[12rem] md:w-[12rem] lg:w-[20rem] xl:w-[22rem] h-auto'>
+          <img src={assets.ProfilePic3} alt="Profile pic11" />
         </div>
     </div>
   )
