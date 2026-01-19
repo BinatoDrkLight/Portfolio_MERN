@@ -7,7 +7,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const Contact = () => {
 
-  const {axios} = useAppContext();
+  const { axios } = useAppContext();
 
   const [mail, setMail] = useState({
     firstName: '',
