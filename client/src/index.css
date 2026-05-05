@@ -85,12 +85,12 @@ th:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, span:hover
 .firefly {
   position: absolute;
   border-radius: 50%;
-   background: radial-gradient(rgba(173, 20, 255, 0.8), rgba(143, 0, 255, 0));
+  background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
   box-shadow:
-      0 0 10px rgba(143, 0, 255, 0.302),
-      0 0 20px rgba(143, 0, 255, 0.3),
-      0 0 30px rgba(143, 0, 255, 0.3),
-      0 0 40px rgba(143, 0, 255, 0.3);
+      0 0 10px rgba(255, 255, 255, 0.302),
+      0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 30px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 255, 255, 0.3);
   animation: 
       flicker var(--flicker-duration, 4s) infinite alternate,
       moveFirefly var(--move-duration, 10s) linear infinite;
